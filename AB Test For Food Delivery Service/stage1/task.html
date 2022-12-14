@@ -1,0 +1,75 @@
+<h2>Description</h2>
+
+<p>After collecting feedback from users, the product team suggested several changes to the menu page of the company app. The UX and UI designers developed a new menu interface that shows the most popular items at the top of the page. You, as an analyst, need to investigate a possible increase in the average order value (AOV) with a new app design. In other words, you need <a href="https://towardsdatascience.com/hypothesis-testing-for-a-b-test-an-application-of-inferential-statistics-5ae2e779ff04" rel="noopener noreferrer nofollow">to conduct the <strong>A/B test</strong></a>.&nbsp;</p>
+
+<p>The product manager calculated the traffic size for the experiment&nbsp;and suggested the sample sizes. Your task is to check whether a sample with the specified size can adequately reflect the outcome before committing any design changes. Take two samples of a particular size and assess whether they contain significant statistical differences.</p>
+
+<h2>Objectives</h2>
+
+<p>Check if the mean order value is equal in both samples. For this, you need to do the following:</p>
+
+<ul>
+	<li>Treating the order value as normal-distributed, conduct <a href="https://machinelearningmastery.com/statistical-hypothesis-tests/" rel="noopener noreferrer nofollow">a hypothesis test</a> to check the assumption for the equality of variances. Apply&nbsp;<a href="https://medium.com/@kyawsawhtoon/levenes-test-the-assessment-for-equality-of-variances-94503b695a57" rel="noopener noreferrer nofollow">Levene&#39;s test</a>. Print the test statistic and p-value. Make a conclusion of the&nbsp;null hypothesis (<code>Reject null hypothesis: yes</code> or <code>no</code>) and&nbsp;variances (<code>Variances are equal: yes</code> or <code>no</code>).</li>
+	<li>Based on the results of Levene&#39;s test, apply the&nbsp;<a href="https://www.youtube.com/watch?v=pTmLQvMM-1M&amp;ab_channel=BozemanScience" rel="noopener noreferrer nofollow">t-test</a>&nbsp;to the independent samples with equal/unequal variances.&nbsp;Show the test statistic and p-value, conclude the null hypothesis (&nbsp;<code>Reject null hypothesis: yes</code> or <code>no</code>) and&nbsp;whether the group means are equal or not (<code>Means are equal: yes</code> or <code>no</code>).</li>
+</ul>
+
+<p>Your program must follow the format shown in the Example section.</p>
+
+<p>Note that there are only two options: <code>p-value &gt; 0.05</code> or <code>p-value &lt;= 0.05</code>.</p>
+
+<p>You can download a file with the dataset&nbsp;<a href="https://stepik.org/media/attachments/lesson/564554/aa_test.csv" rel="noopener noreferrer nofollow">here</a> and save it to your working directory.</p>
+
+<h2>Examples</h2>
+
+<p><strong>Example 1:</strong></p>
+
+<pre>
+<code class="language-no-highlight">Levene's test
+W = 0.084, p-value &gt; 0.05
+Reject null hypothesis: no
+Variances are equal: yes
+
+T-test
+t = 0.205, p-value &gt; 0.05
+Reject null hypothesis: no
+Means are equal: yes
+</code></pre>
+
+<p><strong>Example 2:</strong></p>
+
+<pre>
+<code class="language-no-highlight">Levene's test
+W = 0.185, p-value &gt; 0.05
+Reject null hypothesis: no
+Variances are equal: yes
+
+T-test
+t = -13.956, p-value &lt;= 0.05
+Reject null hypothesis: yes
+Means are equal: no</code></pre>
+
+<p><strong>Example 3:</strong></p>
+
+<pre>
+<code class="language-no-highlight">Levene's test
+W = 64.439, p-value &lt;= 0.05
+Reject null hypothesis: yes
+Variances are equal: no
+
+T-test
+t = 0.723, p-value &gt; 0.05
+Reject null hypothesis: no
+Means are equal: yes</code></pre>
+
+<p><strong>Example 4:</strong></p>
+
+<pre>
+<code class="language-no-highlight">Levene's test
+W = 62.241, p-value &lt;= 0.05
+Reject null hypothesis: yes
+Variances are equal: no
+
+T-test
+t = 10.569, p-value &lt;= 0.05
+Reject null hypothesis: yes
+Means are equal: no</code></pre>

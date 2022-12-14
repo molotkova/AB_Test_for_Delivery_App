@@ -1,0 +1,40 @@
+<h2>Description</h2>
+
+<p>In this stage, you need to test a statistical hypothesis and establish whether the average order value (AOV) has changed after switching to the new design. As you may have noticed earlier, the order value is not distributed normally. Let&#39;s try to apply a <strong>non-parametric<em> </em>test</strong> and interpret the results. Since non-parametric tests require fewer observations, the sample prepared in the previous stage is suitable for hypothesis testing in this stage.</p>
+
+<p>What is the best way to present the A/B testing results to the members of your team who are not familiar with the basics of statistical inference? Is the interface in the experimental group better than in the control one AOV-wise? How sure are you about the results? Share your thoughts in the comments!</p>
+
+<h2>Objectives</h2>
+
+<p>Test the hypothesis with <a href="https://www.youtube.com/watch?v=Twk6lBhBl88" rel="noopener noreferrer nofollow">Mann-Whitney U test</a> and print:</p>
+
+<ul>
+	<li>The test statistic for the control group (<code>U1</code>).</li>
+	<li>The p-value.</li>
+	<li>The conclusion on the null hypothesis (<code>Reject null hypothesis: yes</code> or <code>no</code>).</li>
+	<li>Conclusion on whether the underlying distribution of the control group is the same as the experimental one&nbsp;(<code>Distributions are same: yes</code> or&nbsp;<code>no</code>).</li>
+</ul>
+
+<p>Your program must follow the format shown in the Example section. Choose the level of significance of <span class="math-tex">\(0.05\)</span>.</p>
+
+<p>Note that there are only two options: <code>p-value &gt; 0.05</code> or <code>p-value &lt;= 0.05</code>.</p>
+
+<p>[HINT]If you want, you can try out the&nbsp;<a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.mannwhitneyu.html" rel="noopener noreferrer nofollow">scipy.stats.mannwhitneyu()</a> function from the <code>SciPy</code> module.[/HINT]</p>
+
+<h2>Examples</h2>
+
+<p><strong>Example 1:</strong></p>
+
+<pre>
+<code class="language-no-highlight">Mann-Whitney U test
+U1 = 4026.0, p-value &lt;= 0.05
+Reject null hypothesis: yes
+Distributions are same: no</code></pre>
+
+<p><strong>Example 2:</strong></p>
+
+<pre>
+<code class="language-no-highlight">Mann-Whitney U test
+U1 = 17.0, p-value &gt; 0.05
+Reject null hypothesis: no
+Distributions are same: yes</code></pre>

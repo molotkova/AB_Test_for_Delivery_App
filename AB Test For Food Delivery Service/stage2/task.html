@@ -1,0 +1,26 @@
+<h2>Description</h2>
+
+<p>The A/A test showed a statistically significant difference in the average order value in the two groups. It means that the sampling procedure was incorrect or the group size was too small. The product team had no bias in the sampling &mdash; it was random. You should calculate the new sample size that will be sufficient to detect the minimum statistically significant difference.</p>
+
+<h2>Objectives</h2>
+
+<ul>
+	<li>
+	<p>Perform <a href="https://machinelearningmastery.com/statistical-power-and-power-analysis-in-python/" rel="noopener noreferrer nofollow">a power analysis</a> with the&nbsp;effect&nbsp;of <span class="math-tex">\(0.2\)</span>, the&nbsp;power&nbsp;of <span class="math-tex">\(0.8\)</span> and the significance level of <span class="math-tex">\(0.05\)</span>&nbsp;to estimate the sample size of one group. Round the results&nbsp;to the nearest hundredth. Control and experimental groups are supposed to be equal;</p>
+	</li>
+	<li>
+	<p>Upload the resulting&nbsp;<a href="https://stepik.org/media/attachments/lesson/564554/ab_test.csv" rel="noopener noreferrer nofollow">dataset</a> and count the number of sessions in the control and experimental groups (the&nbsp;<code>group</code>&nbsp;column).</p>
+	</li>
+</ul>
+
+<p>Your program must follow the format shown in the Example section.</p>
+
+<p>[HINT]You can try the&nbsp;<a href="https://www.statsmodels.org/stable/generated/statsmodels.stats.power.tt_ind_solve_power.html" rel="noopener noreferrer nofollow">statsmodels.stats.power.tt_ind_solve_power()</a> function from the <a href="https://www.statsmodels.org/stable/index.html" rel="noopener noreferrer nofollow">statsmodels</a>&nbsp;module.[/HINT]</p>
+
+<h2>Example</h2>
+
+<pre>
+<code class="language-no-highlight">Sample size: 600  # it is the result of power analysis
+
+Control group: 598
+Experimental group: 601</code></pre>

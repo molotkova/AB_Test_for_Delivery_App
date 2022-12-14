@@ -1,0 +1,10 @@
+type: edu
+files:
+- name: tests.py
+  visible: false
+- name: cleaning.py
+  visible: true
+- name: zipper.sh
+  visible: true
+- name: requirements.txt
+  visible: true
